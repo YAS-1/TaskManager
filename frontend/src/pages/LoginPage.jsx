@@ -38,7 +38,7 @@ const LoginPage = () => {
 						borderWidth={"1px"}
 						p={8}
 						marginTop={20}
-						width={["250px", "500px"]}
+						width={["300px", "500px"]}
 						shadow={"xl"}
 						shadowColor={"gray.900"}
                         bgColor={"gray.800"}>
@@ -55,10 +55,10 @@ const LoginPage = () => {
 										type={"text"}
 										placeholder={"Username"}
 										width={["250px", "450px"]}
+                                        height={["35px","50px"]}
 										border={"solid"}
 										borderWidth={"1.5px"}
 										rounded={"lg"}
-										height={"50px"}
 										fontSize={"lg"}
 										color={"whiteAlpha.700"}
                                         name={"username"}
@@ -70,10 +70,10 @@ const LoginPage = () => {
 										type={"password"}
 										placeholder={"Password"}
 										width={["250px", "450px"]}
+                                        height={["35px","50px"]}
 										border={"solid"}
 										borderWidth={"1.5px"}
 										rounded={"lg"}
-										height={"50px"}
 										fontSize={"lg"}
                                         color={"whiteAlpha.700"}
                                         name={"password"}
@@ -85,6 +85,7 @@ const LoginPage = () => {
 										bgColor={"#1E90FF"}
 										rounded={"full"}
 										width={["250px", "450px"]}
+                                        height={["35px","50px"]}
 										_hover={{ bgColor: "#4169E1" }}
 										transition={"ease-in-out"}
 										transitionDuration={"slowest"}

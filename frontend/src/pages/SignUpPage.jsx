@@ -40,7 +40,7 @@ const SignUpPage = () => {
 						borderWidth={"1px"}
 						p={8}
 						marginTop={20}
-						width={["250px", "500px"]}
+						width={["300px", "500px"]}
 						shadow={"xl"}
 						shadowColor={"gray.900"}
                         bgColor={"gray.800"}>
@@ -60,7 +60,7 @@ const SignUpPage = () => {
 										border={"solid"}
 										borderWidth={"1.5px"}
 										rounded={"lg"}
-										height={"50px"}
+										height={["35px","50px"]}
 										fontSize={"lg"}
                                         color={"whiteAlpha.700"}
                                         name={"username"}
@@ -75,7 +75,7 @@ const SignUpPage = () => {
 										border={"solid"}
 										borderWidth={"1.5px"}
 										rounded={"lg"}
-										height={"50px"}
+										height={["35px","50px"]}
 										fontSize={"lg"}
                                         color={"whiteAlpha.700"}
                                         name={"fullname"}
@@ -90,7 +90,7 @@ const SignUpPage = () => {
 										border={"solid"}
 										borderWidth={"1.5px"}
 										rounded={"lg"}
-										height={"50px"}
+										height={["35px","50px"]}
 										fontSize={"lg"}
                                         color={"whiteAlpha.700"}
                                         name={"email"}
@@ -105,7 +105,7 @@ const SignUpPage = () => {
 										border={"solid"}
 										borderWidth={"1.5px"}
 										rounded={"lg"}
-										height={"50px"}
+										height={["35px","50px"]}
 										fontSize={"lg"}
                                         color={"whiteAlpha.700"}
                                         name={"password"}
@@ -117,6 +117,7 @@ const SignUpPage = () => {
 										bgColor={"#1E90FF"}
 										rounded={"full"}
 										width={["250px", "450px"]}
+                                        height={["35px","50px"]}
 										_hover={{ bgColor: "#4169E1" }}
 										transition={"ease-in-out"}
 										transitionDuration={"slowest"}
@@ -128,13 +129,14 @@ const SignUpPage = () => {
 							</Box>
 							<Box>
 								<VStack gapY={4}>
-									<Text fontSize={"lg"} color={"whiteAlpha.700"}>
+									<Text fontSize={["md", "lg"]} color={"whiteAlpha.700"}>
 										Already have an account?
 									</Text>
 									<Link to='/'>
 										<Button
 											rounded={"full"}
-											width={["250px", "450px"]}
+                                            width={["250px", "450px"]}
+                                            height={["35px","50px"]}
 											color={"whiteAlpha.700"}
 											bgColor={"#1E90FF"}
 											_hover={{ bgColor: "#4169E1" }}
