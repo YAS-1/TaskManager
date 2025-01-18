@@ -10,6 +10,7 @@ import {
 	Input,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import AppName from "@/utils/appName";
 
 const SignUpPage = () => {
 
@@ -32,7 +33,8 @@ const SignUpPage = () => {
 
 	return (
 		<Flex align={"center"} justify={"center"}>
-			<Box minW={"100vw"} minH={"100vh"} alignItems={"center"} pt={10}>
+			<Box minW={"100vw"} minH={"100vh"} alignItems={"center"}>
+				<AppName/>
 				<Flex align={"center"} justify={"center"}>
 					<Box
 						rounded={"2xl"}
