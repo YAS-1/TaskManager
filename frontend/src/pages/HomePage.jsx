@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Text, HStack, VStack, Button, Input, Textarea } from "@chakra-ui/react";
+import { Box, Flex, Text, HStack, VStack, Button, Input, Textarea } from "@chakra-ui/react";
 import React, { useState } from "react";
 import {
 	DialogActionTrigger,
@@ -14,21 +14,24 @@ import {
 
 
 function HomePage() {
-    const [ taskName, settaskName] = useState("");
-    const [ taskDescription, settaskDescription] = useState("");
+    const [ task, setTask] = useState([{
+        "taskName":"",
+        "task description":"",
+        "task-status":""    
+    }]);
 
-    const handleChangeTaskName = (e) => {
-        settaskName(e.target.value);
+    const handleChangeTask = (e) => {
+        const {name, value} = e.target;
+
+        setTask((prev) => {
+            return {...prev, [name]:value}
+        });
     }
 
-    const handleChangeTaskDescription = (e) => {
-        settaskDescription(e.target.value);
-    }
-
-    const CreateTask = () => {
-        const Task = {"taskName":taskName,
-            "taskDescription":taskDescription};
-        console.log(Task);
+    const CreateTask = (e) => {
+        
+        e.preventDefault();
+        console.log(task);
     }
 
 	return (
@@ -62,7 +65,7 @@ function HomePage() {
 										color={"whiteAlpha.700"}
                                         name="taskName"
                                         value={taskName}
-                                        onChange={handleChangeTaskName}
+                                        onChange={handleChangeTask}
 										required
                                         />
                                         <Textarea
@@ -77,7 +80,7 @@ function HomePage() {
 										color={"whiteAlpha.700"}
                                         name="taskDescription"
                                         value={taskDescription}
-                                        onChange={handleChangeTaskDescription}
+                                        onChange={handleChangeTask}
 										required
                                         />
                                         </VStack>
