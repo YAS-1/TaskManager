@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/dialog";
 
 function CreatePage() {
-	const [task, setTask] = useState([
+	const [tasks, setTasks] = useState([
 		{
 			taskName: "",
 			taskDescription: "",
@@ -32,14 +32,14 @@ function CreatePage() {
 	const handleChangeTask = (e) => {
 		const { name, value } = e.target;
 
-		setTask((prev) => {
+		setTasks((prev) => {
 			return { ...prev, [name]: value };
 		});
 	};
 
 	const CreateTask = (e) => {
 		e.preventDefault();
-		console.log(task);
+		console.log(tasks);
 	};
 
 	return (
@@ -83,7 +83,7 @@ function CreatePage() {
 												fontSize={"lg"}
 												color={"whiteAlpha.700"}
 												name='taskName'
-												value={task.taskName}
+												value={tasks.taskName}
 												onChange={handleChangeTask}
 												required
 											/>
@@ -98,7 +98,7 @@ function CreatePage() {
 												fontSize={"lg"}
 												color={"whiteAlpha.700"}
 												name='taskDescription'
-												value={task.taskDescription}
+												value={tasks.taskDescription}
 												onChange={handleChangeTask}
 												required
 											/>

@@ -11,7 +11,7 @@ const TaskCard = ({task}) => {
                 transition={"all 0.3s"}
                 bg={"blackAlpha.800"}
                 _hover={{ transform: "translateY(-5px)", shadow: "xl" }}>
-                    <Box p={4} borderWidth={"1px"} borderBottom={"solid"} minH={"250px"} bgGradient="to-br" gradientFrom={"purple.400"}gradientVia={"green.400"}gradientTo={"orange.400"}>
+                    <Box p={4} borderWidth={"1px"} borderBottom={"solid"} minH={"250px"}  minW={"150px"}bgGradient="to-br" gradientFrom={"purple.400"}gradientVia={"green.400"}gradientTo={"orange.400"}>
                         <Text fontSize={"xl"} fontFamily={"cursive"}>{task.taskDescription}</Text>
                     </Box >
                     <Box minH={"100px"} padding={"20px"}>

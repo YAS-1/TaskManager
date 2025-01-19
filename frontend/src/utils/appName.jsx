@@ -3,7 +3,7 @@ import React from 'react'
 
 function AppName() {
   return (
-    <Box minW={"100vw"} minH={"80px"}>
+    <Box>
         <Flex align={"center"} justify={"center"}>
             <Box padding={"15px"}>
                 <Heading as={"h1"} color={"blue.500"} fontFamily={"cursive"}>Task Manager</Heading>
