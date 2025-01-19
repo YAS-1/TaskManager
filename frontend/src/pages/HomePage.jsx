@@ -11,6 +11,8 @@ import {
 	HStack,
 	Flex,
 	Button,
+  Input,
+  Textarea
 } from "@chakra-ui/react";
 import {
 	DialogActionTrigger,
@@ -27,6 +29,22 @@ import TaskCard from "@/utils/TaskCard";
 import AppName from "@/utils/appName";
 
 function HomePage() {
+
+  // const [tasks, setTasks] = useState([tasks]);
+
+  // const handleChangeTask = (e) => {
+  //   const { name, value } = e.target;
+
+  //   setTasks((prev) => {
+  //     return { ...prev, [name]: value };
+  //   });
+  // };
+
+  const CreateTask = (e) => {
+    e.preventDefault();
+    console.log(tasks);
+  };
+
 	return (
 		<Box
 			paddingX={"20px"}
@@ -38,9 +56,61 @@ function HomePage() {
 				<AppName />
 				<Box>
 					<Flex align={"center"} justify={"center"}>
-            <Button color={"white"} border={"solid"} borderWidth={"1px"} shadow={"lg"} bgColor={"#1E90FF"} transition={"all 0.s"} _hover={{bgColor: "#4169E1",transform: "translateY(-5px)",shadow: "xl",}}>
-									Add new task
-						</Button>
+                <DialogRoot width={["250px", "500px"]}>
+                  <DialogTrigger asChild>
+                    <Button color={"white"} border={"solid"} borderWidth={"1px"} shadow={"lg"} bgColor={"#1E90FF"}  transition={"ease-in-out"} transitionDuration={"slowest"} _hover={{bgColor: "#4169E1",transform: "translateY(-5px)",shadow: "xl",}}>
+									      Add new task
+						        </Button>
+                  </DialogTrigger>
+                  <DialogContent>
+                    <DialogHeader>
+                      <DialogTitle fontWeight={"bold"} fontSize={"2xl"}>
+                        Create Task
+                      </DialogTitle>
+                    </DialogHeader>
+                    <DialogBody>
+                      <VStack gap={4} align={"left"}>
+                        <Input
+                          type={"text"}
+                          placeholder={"Task name"}
+                          width={["250px", "450px"]}
+                          border={"solid"}
+                          borderWidth={"1.5px"}
+                          rounded={"lg"}
+                          height={"50px"}
+                          fontSize={"lg"}
+                          color={"whiteAlpha.700"}
+                          name='taskName'
+                          value=""
+                          // onChange={handleChangeTask}
+                          required
+                        />
+                        <Textarea
+                          type={"text"}
+                          placeholder={"Task description"}
+                          width={["250px", "450px"]}
+                          border={"solid"}
+                          borderWidth={"1.5px"}
+                          rounded={"lg"}
+                          height={"200px"}
+                          fontSize={"lg"}
+                          color={"whiteAlpha.700"}
+                          name='taskDescription'
+                          value=""
+                          // onChange={handleChangeTask}
+                          required
+                        />
+                      </VStack>
+                    </DialogBody>
+                    <DialogFooter>
+                      <DialogActionTrigger asChild>
+                        <Button variant='outline'>Cancel</Button>
+                      </DialogActionTrigger>
+                      <Button onClick={CreateTask} color={"white"}>Save</Button>
+                    </DialogFooter>
+                    <DialogCloseTrigger />
+                  </DialogContent>
+                </DialogRoot>
 					</Flex>
 				</Box>
 				<HStack gap={5}>
