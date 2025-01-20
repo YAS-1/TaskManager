@@ -51,14 +51,15 @@ function HomePage() {
 			paddingY={"10px"}
 			scrollBehavior={"smooth"}
 			minWidth={"100vw"}
-			minHeight={"100vh"}>
+			minHeight={"100vh"}
+      bgColor={"gray.800"}>
 			<VStack gap={10}>
 				<AppName />
 				<Box>
 					<Flex align={"center"} justify={"center"}>
                 <DialogRoot width={["250px", "500px"]}>
                   <DialogTrigger asChild>
-                    <Button color={"white"} border={"solid"} borderWidth={"1px"} shadow={"lg"} bgColor={"#1E90FF"}  transition={"ease-in-out"} transitionDuration={"slowest"} _hover={{bgColor: "#4169E1",transform: "translateY(-5px)",shadow: "xl",}}>
+                    <Button color={"white"} border={"solid"} borderWidth={"1px"} borderColor={"gray.400"} shadow={"lg"} bgColor={"#1E90FF"}  transition={"ease-in-out"} transitionDuration={"slowest"} _hover={{bgColor: "#4169E1",transform: "translateY(-5px)",shadow: "xl"}}>
 									      Add new task
 						        </Button>
                   </DialogTrigger>

@@ -9,7 +9,7 @@ export const tasks = [
     },
     {
         "id": 2,
-        taskName:"Project",
+        taskName:"Project for DBP",
         taskDescription:"I have to complete the Research project assignment given to me and my group",
         category: "Academic",
         completed: "false",
@@ -17,7 +17,7 @@ export const tasks = [
     },
     {
         "id": 3,
-        taskName:"wash",
+        taskName:"wash clothes",
         taskDescription:"Do the laundry",
         category: "Personal",
         completed: "false",
@@ -25,8 +25,16 @@ export const tasks = [
     },
     {
         "id": 4,
-        taskName:"Read",
+        taskName:"Read for test",
         taskDescription:"Read for the test",
+        category: "Academic",
+        completed: "false",
+        dueDate: "2025-03-01",
+    },
+    {
+        "id": 4,
+        taskName:"Read",
+        taskDescription:"Read for the test that takes upto 20% of the course work grade",
         category: "Academic",
         completed: "false",
         dueDate: "2025-03-01",
