@@ -52,8 +52,8 @@ function HomePage() {
 			scrollBehavior={"smooth"}
 			minWidth={"100vw"}
 			minHeight={"100vh"}
-      bgColor={"gray.800"}>
-			<VStack gap={10}>
+      bgColor={"black"}>
+			<VStack gap={10} overflow={"none"}>
 				<AppName />
 				<Box>
 					<Flex align={"center"} justify={"center"}>
